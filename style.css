@@ -116,18 +116,21 @@ BIOGRAPHIE
     margin: 30px 0;
 }
 
-#video-history, #video-tuto, #video-concert{
+.block-video:not(:first-child){
+    border-top: 1px solid #d9d9d9;
+}
+
+#video-history, #video-concert, #video-dance, #video-evolution, #video-tuto {
     height: 0;
     overflow: hidden;
 }
-
 
 iframe{
     width: 100%;
     padding: 10px 20px;
 }
 
-.block-btn{
+.block-btn, .block-btn{
     display: flex;
     align-items: center;
     justify-content:space-between ;
@@ -138,7 +141,7 @@ iframe{
     margin: 0;
 }
 
-.btn-history, .btn-tuto, .btn-concert {
+.btn-history, .btn-concert, .btn-dance, .btn-evolution, .btn-tuto  {
     font-size: 30px;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -167,7 +170,6 @@ iframe{
 }
 
 .sous-partie p{
-    text-align: justify;
     margin: 0;
 }
 
@@ -255,9 +257,10 @@ FOOTER
         bottom:55px;
     }
 
-    
-    /*#btn-tuto:hover i{
-        animation: upAndDown 0.3s alternate infinite;
+
+
+    .btn-history:hover, .btn-concert:hover, .btn-dance:hover, .btn-evolution:hover, .btn-tuto:hover{
+        animation: upAndDown 0.4s alternate infinite;
     }
     
     @keyframes upAndDown {
@@ -267,7 +270,7 @@ FOOTER
         100% {
             transform: translateY(-5px);
         }
-    }*/
+    }
     
     .texte-biographie {
         margin: 30px;
