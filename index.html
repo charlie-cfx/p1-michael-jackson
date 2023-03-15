@@ -1,33 +1,119 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="style.css">
-        <title>Michael JACKSON</title>
-    </head>
-    <body>
-        <nav>
-            <!-- ICI LE CODE DE JUNIOR -->
-        </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Michael JACKSON</title>
+  </head>
+  <body>
+    <nav>
+      <!-- ICI LE CODE DE JUNIOR -->
+    </nav>
 
-        <header>
-            <!-- ICI LE CODE DE CHARLIE -->
-        </header>
+    <header>
+      <!-- ICI LE CODE DE CHARLIE -->
+    </header>
 
-        <section id="biographie">
-            <!-- ICI LE CODE DE HUGO -->
-        </section>
+    <section id="biographie">
+      <!-- ICI LE CODE DE HUGO -->
+    </section>
 
-        <section id="discographie">
-            <!-- ICI LE CODE DE OTHMAN -->
-        </section>
+    <!-- SECTION OTHMAN -->
+    <section class="carrousel discograpy-carrousel">
+      <h2>Discographie</h2>
+      <div class="carrousel-container">
+        <div class="carrousel-slides slide1" id="left-bloc">
+          <!-- <img
+            src="https://fastly.picsum.photos/id/866/200/300.jpg?hmac=rcadCENKh4rD6MAp6V_ma-AyWv641M4iiOpe1RyFHeI"
+            alt="" -->
+          <iframe
+            title="deezer-widget"
+            src="https://widget.deezer.com/widget/dark/album/1441212?tracklist=false"
+            frameborder="0"
+            allowtransparency="true"
+            allow="encrypted-media; clipboard-write"
+            class="switchable-img"
+          ></iframe>
 
-        <footer>
-            <!-- ICI LE CODE DE JUNIOR -->
-        </footer>
-        <script src="main.js"></script>
-    </body>
+          <!-- /> -->
+          <div class="arrow-container-left">
+            <img
+              src="images/chevron-left.svg"
+              alt="left-arrow"
+              class="left-arrow"
+            />
+          </div>
+        </div>
+        <div class="carrousel-slides slide2">
+          <iframe
+            title="deezer-widget"
+            src="https://widget.deezer.com/widget/dark/album/96126?tracklist=false"
+            frameborder="0"
+            allowtransparency="true"
+            allow="encrypted-media; clipboard-write"
+            class="main-widget"
+          ></iframe>
+          <!-- <img
+            src="https://fastly.picsum.photos/id/866/200/300.jpg?hmac=rcadCENKh4rD6MAp6V_ma-AyWv641M4iiOpe1RyFHeI"
+            alt=""
+            class="main-image" -->
+          />
+          <div class="dots-container">
+            <div class="dots"></div>
+            <div class="dots"></div>
+            <div class="dots"></div>
+          </div>
+        </div>
+
+        <div class="carrousel-slides slide3">
+          <!-- <img
+            src="https://fastly.picsum.photos/id/866/200/300.jpg?hmac=rcadCENKh4rD6MAp6V_ma-AyWv641M4iiOpe1RyFHeI"
+            alt="" -->
+          <iframe
+            title="deezer-widget"
+            src="https://widget.deezer.com/widget/dark/album/228321?tracklist=false"
+            frameborder="0"
+            allowtransparency="true"
+            allow="encrypted-media; clipboard-write"
+            class="switchable-img"
+          ></iframe>
+
+          />
+
+          <div class="arrow-container-right">
+            <img
+              src="images/chevron-right.svg"
+              alt="right-arrow"
+              class="right-arrow"
+            />
+          </div>
+        </div>
+        <img
+          src="images/michael-jackson-bg.png"
+          alt="michel jackson"
+          class="jackson-background"
+        />
+      </div>
+      <div class="arrows-mobile">
+        <img
+          src="images/chevron-left.svg"
+          alt="left-arrow"
+          class="mobile-left-arrow"
+        />
+        <img
+          src="images/chevron-right.svg"
+          alt="right-arrow"
+          class="mobile-right-arrow"
+        />
+      </div>
+    </section>
+
+    <footer>
+      <!-- ICI LE CODE DE JUNIOR -->
+    </footer>
+    <script src="main.js"></script>
+  </body>
 </html>

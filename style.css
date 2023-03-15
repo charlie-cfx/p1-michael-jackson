@@ -1,21 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
 
 :root {
-    /* COLORS */
-    --color--black: #000;
-    --color--white: #fff;
+  /* COLORS */
+  --color--black: #000;
+  --color--white: #fff;
 
-    /* FONTS */
-    --main-font: "Inter", sans-serif;
+  /* FONTS */
+  --main-font: "Inter", sans-serif;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 
-    /* FONTS */
-    font-family: var(--main-font);
-    font-size: 1rem;
-    line-height: 1.5rem;
+  /* FONTS */
+  font-family: var(--main-font);
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 /*
@@ -25,22 +25,22 @@ HEADINGS
 */
 
 h1 {
-    font-size: 2.25rem;
-    line-height: 2.75rem;
-    letter-spacing: -0.02em;
-    font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  letter-spacing: -0.02em;
+  font-weight: 700;
 }
 
 h2 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
 }
 
 h3 {
-    font-size: 1.25rem;
-    line-height: 1.875rem;
-    font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  font-weight: 700;
 }
 
 /*
@@ -51,7 +51,6 @@ NAVBAR
 
 /* ICI LE CODE DE JUNIOR */
 
-
 /*
 ––––––––––––––––––––––––––––––––––––––––––––––––––
 HEADER
@@ -59,7 +58,6 @@ HEADER
 */
 
 /* ICI LE CODE DE CHARLIE */
-
 
 /*
 ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -69,7 +67,6 @@ BIOGRAPHIE
 
 /* ICI LE CODE DE HUGO */
 
-
 /*
 ––––––––––––––––––––––––––––––––––––––––––––––––––
 DISCOGRAPHIE
@@ -77,8 +74,57 @@ DISCOGRAPHIE
 */
 
 /* ICI LE CODE DE OTHMAN */
+.discograpy-carrousel {
+  background-color: #000;
+  /* height: 100vh; */
+  border-radius: 30px;
+}
+h2 {
+  color: #fff;
+  font-size: 2.5rem;
+}
+.discograpy-carrousel h2 {
+  padding: 25px;
+}
+.carrousel-container {
+  /* height: 65vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
 
-
+.carrousel-slides .main-widget {
+  border-radius: 10px;
+  height: 60vh;
+}
+.slide1 iframe,
+.slide3 iframe {
+  display: none;
+}
+.dots-container {
+  display: none;
+}
+.arrows-mobile {
+  margin-top: 3%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+.arrows-mobile .mobile-left-arrow,
+.arrows-mobile .mobile-right-arrow {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 5px;
+  cursor: pointer;
+}
+.jackson-background {
+  display: none;
+}
 /*
 ––––––––––––––––––––––––––––––––––––––––––––––––––
 FOOTER
@@ -87,74 +133,175 @@ FOOTER
 
 /* ICI LE CODE DE JUNIOR */
 
-
-
-@media screen and (max-width: 768px) {
-
-    /*
+@media screen and (min-width: 768px) {
+  /*
     ––––––––––––––––––––––––––––––––––––––––––––––––––
     HEADINGS
     ––––––––––––––––––––––––––––––––––––––––––––––––––
     */
 
-    h1 {
-        font-size: 3rem;
-        line-height: 3.75rem;
-        letter-spacing: -0.02em;
-        font-weight: 700;
-    }
+  h1 {
+    font-size: 3rem;
+    line-height: 3.75rem;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
 
-    h2 {
-        font-size: 1.875rem;
-        line-height: 2.375rem;
-    }
+  h2 {
+    font-size: 1.875rem;
+    line-height: 2.375rem;
+  }
 
-    h3 {
-        font-size: 1.5rem;
-        line-height: 2rem;
-    }
+  h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 
-    /*
+  /*
     ––––––––––––––––––––––––––––––––––––––––––––––––––
     NAVBAR
     ––––––––––––––––––––––––––––––––––––––––––––––––––
     */
 
-    /* ICI LE CODE DE JUNIOR */
+  /* ICI LE CODE DE JUNIOR */
 
-
-    /*
+  /*
     ––––––––––––––––––––––––––––––––––––––––––––––––––
     HEADER
     ––––––––––––––––––––––––––––––––––––––––––––––––––
     */
 
-    /* ICI LE CODE DE CHARLIE */
+  /* ICI LE CODE DE CHARLIE */
 
-
-    /*
+  /*
     ––––––––––––––––––––––––––––––––––––––––––––––––––
     BIOGRAPHIE
     ––––––––––––––––––––––––––––––––––––––––––––––––––
     */
 
-    /* ICI LE CODE DE HUGO */
+  /* ICI LE CODE DE HUGO */
 
-
-    /*
+  /*
     ––––––––––––––––––––––––––––––––––––––––––––––––––
     DISCOGRAPHIE
     ––––––––––––––––––––––––––––––––––––––––––––––––––
     */
 
-    /* ICI LE CODE DE OTHMAN */
+  /* ICI LE CODE DE OTHMAN */
+  /* SECTION MOBILE  */
 
+  .discograpy-carrousel {
+    background-color: #000;
+    /* background-image: url("https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F7%2F70%2FMichael_Jackson_%252820589951783%2529.jpg%2F1200px-Michael_Jackson_%252820589951783%2529.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; */
+    margin: 30px;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+  }
+  h2 {
+    color: #fff;
+  }
+  .carrousel-container {
+    /* height: 70vh; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 70px;
+  }
 
-    /*
+  .carrousel-slides img {
+    border-radius: 10px;
+    margin-top: 35px;
+    height: 50vh;
+    z-index: 2;
+  }
+  .slide1 img,
+  .slide3 img {
+    display: block;
+  }
+  iframe.switchable-img {
+    filter: blur(1.5px);
+    height: 13vw;
+    width: 13vw;
+    opacity: 0.7;
+    display: flex;
+  }
+
+  .jackson-background {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 40%;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    /* margin: 10px 15px 20px 15px; */
+    border-radius: 10px;
+    object-fit: cover;
+    opacity: 0.4;
+  }
+  #left-bloc {
+    /* border: 3px solid brown; */
+    margin-right: 1%;
+  }
+  .arrow-container-left,
+  .arrow-container-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50%;
+  }
+  .arrow-container-left .left-arrow,
+  .arrow-container-right .right-arrow {
+    width: 4vw;
+    height: 4vw;
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 5px;
+    cursor: pointer;
+  }
+  .arrow-container-left {
+    margin-top: 60%;
+  }
+
+  .left-arrow {
+    align-self: flex-end;
+  }
+  .right-arrow {
+    align-self: flex-start;
+  }
+  .discograpy-carrousel h2 {
+    text-align: center;
+    padding-top: 130px;
+  }
+
+  .dots-container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 25px;
+  }
+  .dots {
+    width: 1vw;
+    height: 1vw;
+    border: 3px solid grey;
+    border-radius: 50%;
+    background-color: grey;
+  }
+  .arrows-mobile {
+    display: none;
+  }
+
+  /*
     ––––––––––––––––––––––––––––––––––––––––––––––––––
     FOOTER
     ––––––––––––––––––––––––––––––––––––––––––––––––––
     */
 
-    /* ICI LE CODE DE JUNIOR */
+  /* ICI LE CODE DE JUNIOR */
 }
