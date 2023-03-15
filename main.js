@@ -98,16 +98,14 @@ function createKeyFiguresSlider(sliderSelector, slideSelector, parentSelector, s
     
     
     // The slides's height
-    const slideHeight = parentHeight / 3;
-    slider.style.height = `${parentHeight}px`;
-
+    
     // We add the 3 first slides at the end to create an infinite scrolling effect
     createKeyFigures(keyFigures[0].iconClass, keyFigures[0].title, keyFigures[0].description);
     createKeyFigures(keyFigures[1].iconClass, keyFigures[1].title, keyFigures[1].description);
     createKeyFigures(keyFigures[3].iconClass, keyFigures[3].title, keyFigures[3].description);
-
+    
     let index = 0;
-
+    
     setInterval(function () {
         if (window.screen.width < 768) {
             index++;
@@ -121,6 +119,8 @@ function createKeyFiguresSlider(sliderSelector, slideSelector, parentSelector, s
                 }
             }, 1000);
         } else {
+            const slideHeight = parentHeight / 3;
+            slider.style.height = `${parentHeight}px`;
             index++;
             slider.style.transition = "transform 1s linear ";
             slider.style.transform = `translateY(${index * -slideHeight}px)`;
