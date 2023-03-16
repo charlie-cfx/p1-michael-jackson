@@ -35,6 +35,11 @@ const keyFigures = [
         description: "de tournée mondiale",
     },
     {
+        iconClass: "bi-trophy",
+        title: "152",
+        description: "Awards et récompenses",
+    },
+    {
         iconClass: "bi-vinyl",
         title: "150 milions",
         description: "d’albums vendus",
@@ -44,22 +49,6 @@ const keyFigures = [
         title: "13",
         description: "Grammy Awards",
     },
-    {
-        iconClass: "bi-star",
-        title: "13",
-        description: "Grammy Awards",
-    },
-    // // {
-    //     iconClass: "bi-star",
-    //     title: "13",
-    //     description: "Grammy Awards",
-    // },
-
-    // {
-    //     iconClass: "bi-star",
-    //     title: "13",
-    //     description: "Grammy Awards",
-    // },
 ];
 
 function createKeyFigures(icon, title, description) {
@@ -89,13 +78,10 @@ function createKeyFigures(icon, title, description) {
 // CREATING THE KEY FIGURES
 
 if (keyFigures.length % 2 === 0) {
-    console.log("Pair");
     for (let i = 0; i < keyFigures.length; i++) {
         createKeyFigures(keyFigures[i].iconClass, keyFigures[i].title, keyFigures[i].description);
     }
 } else {
-    console.log("Impair");
-
     for (let i = 0; i < keyFigures.length - 1; i++) {
         createKeyFigures(keyFigures[i].iconClass, keyFigures[i].title, keyFigures[i].description);
     }
@@ -157,4 +143,4 @@ function createKeyFiguresSlider(sliderSelector, slideSelector, parentSelector, s
     }, slideDuration);
 }
 
-createKeyFiguresSlider(".key-figures__list", ".key-figure", "header .header__content", 3000);
+createKeyFiguresSlider("header .key-figures__list", "header .key-figure", "header .header__content", 3000);
