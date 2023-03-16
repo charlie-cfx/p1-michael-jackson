@@ -101,77 +101,72 @@ BIOGRAPHIE
 ––––––––––––––––––––––––––––––––––––––––––––––––––
 */
 
-/* ICI LE CODE DE HUGO */
 #biographie{
     display: flex;
     flex-direction: column-reverse;
-    padding:25px;
+    padding:1.6rem;
 }
 
-.wrapper{
+#biographie .wrapper{
     width: 100%;
     border: 1px solid #D9D9D9;
     box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
-    margin: 30px 0;
+    margin: 1.9rem 0;
 }
 
-.block-video:not(:first-child){
+#biographie .block-video:not(:first-child){
     border-top: 1px solid #d9d9d9;
 }
 
-#video-history, #video-concert, #video-dance, #video-evolution, #video-tuto {
+#biographie .video {
     height: 0;
     overflow: hidden;
 }
 
-iframe{
+#biographie iframe{
     width: 100%;
-    padding: 10px 20px;
+    padding: 0.6rem 1.25rem;
 }
 
-.block-btn, .block-btn{
+#biographie .btn{
     display: flex;
     align-items: center;
     justify-content:space-between ;
-    padding: 10px;
+    padding: 0.6rem;
 }
 
-.block-btn h3{
+#biographie h2{
     margin: 0;
 }
 
-.btn-history, .btn-concert, .btn-dance, .btn-evolution, .btn-tuto  {
-    font-size: 30px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-/*#btn:hover i{
-    animation: upAndDown 0.3s alternate infinite;
-}
-
-@keyframes upAndDown {
-    0% {
-        transform: translateY(5px);
-    }
-    100% {
-        transform: translateY(-5px);
-    }
-}*/
-
-.texte-biographie h2{
+#biographie h3{
     margin: 0;
 }
 
-.sous-partie h3{
-    margin: 0;
-    padding: 16px 0px;
+#biographie .subpart h3{
+    padding: 1rem 0;
 }
 
-.sous-partie p{
+#biographie .subpart p{
     margin: 0;
 }
+#biographie i{
+    font-size: 2rem;
+}
+
+#biographie i::before{
+    transition: transform 1s ease;
+}
+
+#biographie .active i::before{
+    transform: rotate(180deg);
+}
+
+#biographie .active .video{
+    height: max-content;
+}
+
 
 
 /*
@@ -241,15 +236,12 @@ FOOTER
     BIOGRAPHIE
     ––––––––––––––––––––––––––––––––––––––––––––––––––
     */
-
-    /* ICI LE CODE DE HUGO */
-
     #biographie{
         flex-direction: row;
     }
     
-    .wrapper{
-        margin: 30px;
+    #biographie .wrapper{
+        margin: 1.9rem;
         width: 70%;
         height: 50%;
         position: sticky;
@@ -257,10 +249,12 @@ FOOTER
         bottom:55px;
     }
 
+    #biographie .btn{
+        cursor: pointer;
+    }
 
-
-    .btn-history:hover, .btn-concert:hover, .btn-dance:hover, .btn-evolution:hover, .btn-tuto:hover{
-        animation: upAndDown 0.4s alternate infinite;
+    #biographie .btn:hover i{
+        animation: upAndDown 0.5s alternate infinite;
     }
     
     @keyframes upAndDown {
@@ -272,16 +266,16 @@ FOOTER
         }
     }
     
-    .texte-biographie {
+    #biographie .text-biography {
         margin: 30px;
         width: 70%;
         border: 1px solid #D9D9D9;
         box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.3);
-        border-radius: 10px;
-        padding: 20px;
+        border-radius: 0.6rem;
+        padding: 1.25rem;
     }
 
-    .sous-partie p{
+    #biographie .subpart p{
         text-align: start;
     }
 
