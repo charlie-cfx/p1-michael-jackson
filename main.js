@@ -1,3 +1,30 @@
+/* LOADER */
+
+function displayWhenLoaded() {
+    let timer;
+    timer = setTimeout(fadeOutLoader, 3500);
+}
+
+function fadeOutLoader() {
+    let element = document.getElementById("loader");
+    let opacity = 1;
+
+    // fonction d'animation
+    function animate() {
+        if (opacity > 0) {
+            opacity -= 0.1; // diminution de l'opacité de 0.1 à chaque itération
+            element.style.opacity = opacity;
+            requestAnimationFrame(animate); // demande de répéter l'animation
+        } else {
+            element.style.display = "none"; // masquage de l'élément lorsque l'opacité atteint 0
+        }
+    }
+
+    animate(); // démarrage de l'animation
+}
+
+/* HEADER'S SLIDER */
+
 const keyFiguresClass = document.querySelector(".key-figures__list");
 
 // KEY FIGURES
@@ -43,8 +70,7 @@ function createKeyFigures(icon, title, description) {
     const keyFigureIcon = document.createElement("i");
     keyFigureIcon.classList.add("bi", icon);
     keyFigure.appendChild(keyFigureIcon);
-    
-    
+
     const keyFigureContent = document.createElement("div");
     keyFigureContent.classList.add("key-figure__content");
     keyFigure.appendChild(keyFigureContent);
@@ -62,55 +88,51 @@ function createKeyFigures(icon, title, description) {
 
 // CREATING THE KEY FIGURES
 
-if (keyFigures.length % 2 === 0){
+if (keyFigures.length % 2 === 0) {
     console.log("Pair");
     for (let i = 0; i < keyFigures.length; i++) {
         createKeyFigures(keyFigures[i].iconClass, keyFigures[i].title, keyFigures[i].description);
     }
-}else{
+} else {
     console.log("Impair");
 
-    for (let i = 0; i < (keyFigures.length - 1); i++) {
+    for (let i = 0; i < keyFigures.length - 1; i++) {
         createKeyFigures(keyFigures[i].iconClass, keyFigures[i].title, keyFigures[i].description);
     }
 }
-
 
 // CREATING A SLIDER
 function createKeyFiguresSlider(sliderSelector, slideSelector, parentSelector, slideDuration) {
     // The slider
     const slider = document.querySelector(sliderSelector);
 
-    // The slider's width
-    const sliderWidth = document.querySelector(sliderSelector).offsetWidth;
-   
     // The slider's number of slides
     const numberSlides = document.querySelector(sliderSelector).childElementCount;
-    
+
     // The slides
     const slide = document.querySelector(slideSelector);
-    
+
     // The slides's width
-    const slideWidth = slide.offsetWidth;
-    
+    let slideWidth = slide.offsetWidth;
+
     // The slider's parent height
-    const parentHeight = document.querySelector(parentSelector).offsetHeight;
-    
-    
+    let parentHeight = document.querySelector(parentSelector).offsetHeight;
+
     // The slides's height
-    
+
     // We add the 3 first slides at the end to create an infinite scrolling effect
     createKeyFigures(keyFigures[0].iconClass, keyFigures[0].title, keyFigures[0].description);
     createKeyFigures(keyFigures[1].iconClass, keyFigures[1].title, keyFigures[1].description);
     createKeyFigures(keyFigures[3].iconClass, keyFigures[3].title, keyFigures[3].description);
-    
+
     let index = 0;
-    
+
     setInterval(function () {
-        if (window.screen.width < 768) {
+        if (window.innerWidth < 768) {
             index++;
             slider.style.transition = "transform 1s linear ";
             slider.style.transform = `translateX(${index * -slideWidth}px)`;
+            slider.style.height = "auto";
             setTimeout(function () {
                 if (index >= numberSlides) {
                     index = 0;
@@ -119,9 +141,9 @@ function createKeyFiguresSlider(sliderSelector, slideSelector, parentSelector, s
                 }
             }, 1000);
         } else {
-            const slideHeight = parentHeight / 3;
-            slider.style.height = `${parentHeight}px`;
             index++;
+            let slideHeight = parentHeight / 3;
+            slider.style.height = `${parentHeight}px`;
             slider.style.transition = "transform 1s linear ";
             slider.style.transform = `translateY(${index * -slideHeight}px)`;
             setTimeout(function () {
@@ -136,19 +158,3 @@ function createKeyFiguresSlider(sliderSelector, slideSelector, parentSelector, s
 }
 
 createKeyFiguresSlider(".key-figures__list", ".key-figure", "header .header__content", 3000);
-
-// if (window.screen.width < 768) {
-
-//     if (index === numberSlides - 1) {
-//         slider.style.transition = "transform 1s ease";
-//         slider.style.transform = `translateX(${index * -slideWidth - (slideWidth - sliderWidth)}px)`;
-
-//     } else {
-
-//         slider.style.transition = "transform 1s linear ";
-//         slider.style.transform = `translateX(${index * -slideWidth}px)`;
-//     }
-// }else{
-//     // slider.style.transform = `translate3d(0,${index * -slideHeight}px,0)`;
-
-// }
