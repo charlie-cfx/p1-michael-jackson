@@ -171,6 +171,76 @@ BIOGRAPHIE
 ––––––––––––––––––––––––––––––––––––––––––––––––––
 */
 /* ICI LE CODE DE HUGO */
+
+#biographie{
+    display: flex;
+    flex-direction: column-reverse;
+    padding:25px;
+}
+
+.wrapper{
+    width: 100%;
+    border: 1px solid #D9D9D9;
+    box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin: 30px 0;
+}
+
+#video-history, #video-tuto, #video-concert{
+    height: 0;
+    overflow: hidden;
+}
+
+
+iframe{
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.block-btn{
+    display: flex;
+    align-items: center;
+    justify-content:space-between ;
+    padding: 10px;
+}
+
+.block-btn h3{
+    margin: 0;
+}
+
+.btn-history, .btn-tuto, .btn-concert {
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/*#btn:hover i{
+    animation: upAndDown 0.3s alternate infinite;
+}
+
+@keyframes upAndDown {
+    0% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}*/
+
+.texte-biographie h2{
+    margin: 0;
+}
+
+.sous-partie h3{
+    margin: 0;
+    padding: 16px 0px;
+}
+
+.sous-partie p{
+    text-align: justify;
+    margin: 0;
+}
+
 /*
 ––––––––––––––––––––––––––––––––––––––––––––––––––
 DISCOGRAPHIE
@@ -183,6 +253,7 @@ FOOTER
 ––––––––––––––––––––––––––––––––––––––––––––––––––
 */
 /* ICI LE CODE DE JUNIOR */
+
 @media screen and (min-width: 768px) {
   /*
   ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -296,4 +367,4 @@ FOOTER
   ––––––––––––––––––––––––––––––––––––––––––––––––––
   */
   /* ICI LE CODE DE JUNIOR */
-}/*# sourceMappingURL=style.css.map */
+}
