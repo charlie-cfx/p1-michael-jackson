@@ -144,3 +144,16 @@ function createKeyFiguresSlider(sliderSelector, slideSelector, parentSelector, s
 }
 
 createKeyFiguresSlider("header .key-figures__list", "header .key-figure", "header .header__content", 3000);
+
+/* BIOGRAPHY'S ACCORDION */
+
+/* Gestion button biography
+When we click the button, class active has added*/
+
+let btn = document.querySelectorAll('#biographie .btn');
+
+    for (let i = 0; i < btn.length; i++) {
+        btn[i].addEventListener("click", () => {
+                btn[i].parentNode.classList.toggle("active");
+        })
+    }

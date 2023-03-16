@@ -167,78 +167,74 @@ header .key-figures .key-figures__list .key-figure .key-figure__description {
 
 /*
 ––––––––––––––––––––––––––––––––––––––––––––––––––
-BIOGRAPHIE
+BIOGRAPHY
 ––––––––––––––––––––––––––––––––––––––––––––––––––
 */
-/* ICI LE CODE DE HUGO */
 
 #biographie{
     display: flex;
     flex-direction: column-reverse;
-    padding:25px;
+    padding:1.6rem;
 }
 
-.wrapper{
+#biographie .wrapper{
     width: 100%;
     border: 1px solid #D9D9D9;
     box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
-    margin: 30px 0;
+    margin: 1.9rem 0;
 }
 
-#video-history, #video-tuto, #video-concert{
+#biographie .block-video:not(:first-child){
+    border-top: 1px solid #d9d9d9;
+}
+
+#biographie .video {
     height: 0;
     overflow: hidden;
 }
 
-
-iframe{
+#biographie iframe{
     width: 100%;
-    padding: 10px 20px;
+    padding: 0.6rem 1.25rem;
 }
 
-.block-btn{
+#biographie .btn{
     display: flex;
     align-items: center;
     justify-content:space-between ;
-    padding: 10px;
+    padding: 0.6rem;
 }
 
-.block-btn h3{
+#biographie h2{
     margin: 0;
 }
 
-.btn-history, .btn-tuto, .btn-concert {
-    font-size: 30px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-/*#btn:hover i{
-    animation: upAndDown 0.3s alternate infinite;
-}
-
-@keyframes upAndDown {
-    0% {
-        transform: translateY(5px);
-    }
-    100% {
-        transform: translateY(-5px);
-    }
-}*/
-
-.texte-biographie h2{
+#biographie h3{
     margin: 0;
 }
 
-.sous-partie h3{
-    margin: 0;
-    padding: 16px 0px;
+#biographie .subpart h3{
+    padding: 1rem 0;
 }
 
-.sous-partie p{
-    text-align: justify;
+#biographie .subpart p{
     margin: 0;
+}
+#biographie i{
+    font-size: 2rem;
+}
+
+#biographie i::before{
+    transition: transform 1s ease;
+}
+
+#biographie .active i::before{
+    transform: rotate(180deg);
+}
+
+#biographie .active .video{
+    height: max-content;
 }
 
 /*
@@ -255,116 +251,175 @@ FOOTER
 /* ICI LE CODE DE JUNIOR */
 
 @media screen and (min-width: 768px) {
-  /*
-  ––––––––––––––––––––––––––––––––––––––––––––––––––
-  HEADINGS
-  ––––––––––––––––––––––––––––––––––––––––––––––––––
-  */
-  h1 {
-    font-size: 3rem;
-    line-height: 3.75rem;
-    letter-spacing: -0.02em;
-    font-weight: 700;
-  }
-  h2 {
-    font-size: 1.875rem;
-    line-height: 2.375rem;
-  }
-  h3 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-  /*
-  ––––––––––––––––––––––––––––––––––––––––––––––––––
-  NAVBAR
-  ––––––––––––––––––––––––––––––––––––––––––––––––––
-  */
-  /* ICI LE CODE DE JUNIOR */
-  /*
-  ––––––––––––––––––––––––––––––––––––––––––––––––––
-  HEADER
-  ––––––––––––––––––––––––––––––––––––––––––––––––––
-  */
-  header {
-    display: flex;
-    border-radius: 0 0 48px 48px;
-    overflow: hidden;
-    height: 100%;
-    box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.1), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);
-    border: 2px solid #e5e5e5;
-    margin-bottom: 30px;
-  }
-  header .header__content {
-    flex: 2;
-    padding: 5rem 20rem 5rem 5rem;
-    z-index: 0;
-    height: 100%;
-    position: relative;
-  }
-  header .header__content:before {
-    content: " ";
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 40%;
-    height: 100%;
-    opacity: 0.6;
-    z-index: -1;
-    background-image: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 100%), url("https://images.unsplash.com/photo-1577640905050-83665af216b9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-  header .header__content h1 {
-    margin-bottom: 1rem;
-  }
-  header .key-figures {
-    flex: 1;
-    overflow: hidden;
-    height: 100%;
-    display: block;
-  }
-  header .key-figures .key-figures__list {
-    height: 100vh;
-    flex-direction: column;
-  }
-  header .key-figures .key-figures__list .key-figure {
-    flex-shrink: 0;
-    width: 100%;
-    height: 33.3333333333%;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  header .key-figures .key-figures__list .key-figure i {
-    font-size: 66px;
-  }
-  header .key-figures .key-figures__list .key-figure .key-figure__title {
-    font-size: 2.25rem;
-    line-height: 2.75rem;
-    letter-spacing: -0.02em;
-    font-weight: 500;
-    font-family: var(--main-font);
-    margin-top: 1rem;
-  }
-  /*
-  ––––––––––––––––––––––––––––––––––––––––––––––––––
-  BIOGRAPHIE
-  ––––––––––––––––––––––––––––––––––––––––––––––––––
-  */
-  /* ICI LE CODE DE HUGO */
-  /*
-  ––––––––––––––––––––––––––––––––––––––––––––––––––
-  DISCOGRAPHIE
-  ––––––––––––––––––––––––––––––––––––––––––––––––––
-  */
-  /* ICI LE CODE DE OTHMAN */
-  /*
-  ––––––––––––––––––––––––––––––––––––––––––––––––––
-  FOOTER
-  ––––––––––––––––––––––––––––––––––––––––––––––––––
-  */
-  /* ICI LE CODE DE JUNIOR */
+
+    /*
+    ––––––––––––––––––––––––––––––––––––––––––––––––––
+    HEADINGS
+    ––––––––––––––––––––––––––––––––––––––––––––––––––
+    */
+
+    h1 {
+        font-size: 3rem;
+        line-height: 3.75rem;
+        letter-spacing: -0.02em;
+        font-weight: 700;
+    }
+
+    h2 {
+        font-size: 1.875rem;
+        line-height: 2.375rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    /*
+    ––––––––––––––––––––––––––––––––––––––––––––––––––
+    NAVBAR
+    ––––––––––––––––––––––––––––––––––––––––––––––––––
+    */
+
+    /* ICI LE CODE DE JUNIOR */
+
+
+    /*
+    ––––––––––––––––––––––––––––––––––––––––––––––––––
+    HEADER
+    ––––––––––––––––––––––––––––––––––––––––––––––––––
+    */
+
+     header {
+        display: flex;
+        border-radius: 0 0 48px 48px;
+        overflow: hidden;
+        height: 100%;
+        box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.1), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+        border: 2px solid #e5e5e5;
+        margin-bottom: 30px;
+      }
+      header .header__content {
+        flex: 2;
+        padding: 5rem 20rem 5rem 5rem;
+        z-index: 0;
+        height: 100%;
+        position: relative;
+      }
+      header .header__content:before {
+        content: " ";
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 40%;
+        height: 100%;
+        opacity: 0.6;
+        z-index: -1;
+        background-image: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 100%), url("https://images.unsplash.com/photo-1577640905050-83665af216b9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+      header .header__content h1 {
+        margin-bottom: 1rem;
+      }
+      header .key-figures {
+        flex: 1;
+        overflow: hidden;
+        height: 100%;
+        display: block;
+      }
+      header .key-figures .key-figures__list {
+        height: 100vh;
+        flex-direction: column;
+      }
+      header .key-figures .key-figures__list .key-figure {
+        flex-shrink: 0;
+        width: 100%;
+        height: 33.3333333333%;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      header .key-figures .key-figures__list .key-figure i {
+        font-size: 66px;
+      }
+      header .key-figures .key-figures__list .key-figure .key-figure__title {
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+        letter-spacing: -0.02em;
+        font-weight: 500;
+        font-family: var(--main-font);
+        margin-top: 1rem;
+      }
+
+
+    /*
+    ––––––––––––––––––––––––––––––––––––––––––––––––––
+    BIOGRAPHIE
+    ––––––––––––––––––––––––––––––––––––––––––––––––––
+    */
+    #biographie{
+        flex-direction: row;
+    }
+    
+    #biographie .wrapper{
+        margin: 1.9rem;
+        width: 70%;
+        height: 50%;
+        position: sticky;
+        top: 55px;
+        bottom:55px;
+    }
+
+    #biographie .btn{
+        cursor: pointer;
+    }
+
+    #biographie .btn:hover i{
+        animation: upAndDown 0.5s alternate infinite;
+    }
+    
+    @keyframes upAndDown {
+        0% {
+            transform: translateY(5px);
+        }
+        100% {
+            transform: translateY(-5px);
+        }
+    }
+    
+    #biographie .text-biography {
+        margin: 30px;
+        width: 70%;
+        border: 1px solid #D9D9D9;
+        box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.3);
+        border-radius: 0.6rem;
+        padding: 1.25rem;
+    }
+
+    #biographie .subpart p{
+        text-align: start;
+    }
+
+
+    /*
+    ––––––––––––––––––––––––––––––––––––––––––––––––––
+    DISCOGRAPHIE
+    ––––––––––––––––––––––––––––––––––––––––––––––––––
+    */
+
+    /* ICI LE CODE DE OTHMAN */
+
+
+    /*
+    ––––––––––––––––––––––––––––––––––––––––––––––––––
+    FOOTER
+    ––––––––––––––––––––––––––––––––––––––––––––––––––
+    */
+
+    /* ICI LE CODE DE JUNIOR */
+
 }
