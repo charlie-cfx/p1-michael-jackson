@@ -1,3 +1,6 @@
+/* Gestion button biography
+When we click the button, class active has added*/
+
 let btn = document.querySelectorAll('.btn');
 
     for (let i = 0; i < btn.length; i++) {
