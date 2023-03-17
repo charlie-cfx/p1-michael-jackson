@@ -23,6 +23,29 @@ function fadeOutLoader() {
     animate(); // démarrage de l'animation
 }
 
+/* BUTTON TOP OF THE PAGE */
+let buttonTop = document.getElementById("button-top");
+
+// if (window.scrollY > 700) {
+// } else {
+// }
+
+buttonTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+let scrollpos = window.scrollY;
+
+window.addEventListener("scroll", function () {
+    scrollPosition = window.scrollY;
+    
+    if (scrollPosition >= 300) {
+        buttonTop.classList.add("show");
+    } else {
+        buttonTop.classList.remove("show");
+    }
+});
+
 /* HEADER'S SLIDER */
 
 const keyFiguresClass = document.querySelector(".key-figures__list");
@@ -150,10 +173,10 @@ createKeyFiguresSlider("header .key-figures__list", "header .key-figure", "heade
 /* Gestion button biography
 When we click the button, class active has added*/
 
-let btn = document.querySelectorAll('#biographie .btn');
+let btn = document.querySelectorAll("#biographie .btn");
 
-    for (let i = 0; i < btn.length; i++) {
-        btn[i].addEventListener("click", () => {
-                btn[i].parentNode.classList.toggle("active");
-        })
-    }
+for (let i = 0; i < btn.length; i++) {
+    btn[i].addEventListener("click", () => {
+        btn[i].parentNode.classList.toggle("active");
+    });
+}
