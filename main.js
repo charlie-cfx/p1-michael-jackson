@@ -132,7 +132,7 @@ function createKeyFiguresSlider(sliderSelector, slideSelector, parentSelector, s
     // We add the 3 first slides at the end to create an infinite scrolling effect
     createKeyFigures(keyFigures[0].iconClass, keyFigures[0].title, keyFigures[0].description);
     createKeyFigures(keyFigures[1].iconClass, keyFigures[1].title, keyFigures[1].description);
-    createKeyFigures(keyFigures[3].iconClass, keyFigures[3].title, keyFigures[3].description);
+    createKeyFigures(keyFigures[2].iconClass, keyFigures[2].title, keyFigures[2].description);
 
     let index = 0;
 
