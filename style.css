@@ -1,21 +1,15 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
-
 :root {
     /* COLORS */
     --color--black: #000;
     --color--white: #fff;
-
     /* FONTS */
     --main-font: "Inter", sans-serif;
 }
 
 * {
     box-sizing: border-box;
-
-    /* FONTS */
-    font-family: var(--main-font);
-    font-size: 1rem;
-    line-height: 1.5rem;
 }
 
 /*
@@ -23,7 +17,6 @@
 HEADINGS
 ––––––––––––––––––––––––––––––––––––––––––––––––––
 */
-
 h1 {
     font-size: 2.25rem;
     line-height: 2.75rem;
@@ -45,14 +38,95 @@ h3 {
     font-weight: 700;
     font-family: var(--main-font);
 }
+p {
+    font-family: var(--main-font);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 0.25rem;
+}
+
+/*
+––––––––––––––––––––––––––––––––––––––––––––––––––
+LOADER
+––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+#loader {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: var(--color--black);
+}
+#loader img {
+    width: 50vw;
+    height: 50vw;
+    border-radius: 500px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.1), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+}
+#loader p {
+    color: var(--color--white);
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    font-weight: 400;
+    font-family: var(--main-font);
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    animation: colorblink 1s infinite;
+    opacity: 0;
+}
+@keyframes colorblink {
+    50% {
+        opacity: 1;
+    }
+}
+
+/*
+––––––––––––––––––––––––––––––––––––––––––––––––––
+BUTTON TOP
+––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+#button-top {
+    display: flex;
+    background-color: rgba(28, 28, 27, 0.7);
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    color: var(--color--white);
+    font-size: 30px;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 800;
+    cursor: n-resize;
+}
+
+#button-top:hover {
+    background-color: rgba(28, 28, 27, 1);
+}
+
+#button-top.show {
+    opacity: 1;
+    visibility: visible;
+}
 
 /*
 ––––––––––––––––––––––––––––––––––––––––––––––––––
 NAVBAR
 ––––––––––––––––––––––––––––––––––––––––––––––––––
 */
-
-/* ICI LE CODE DE JUNIOR */
  nav {
     background: #000000;
     height: 13vh;
@@ -73,6 +147,7 @@ nav {
     background:var(--color--black);
     top: 0;
     box-shadow: 0 10px 50px rgba(0, 0, 0, 0.14);
+    z-index: 4;
 }
 
 nav #logo {
@@ -80,7 +155,7 @@ nav #logo {
     width: 118px !important;
     height: 100%;
     transition: transform 0.5s ease;
-    background-image: url("logo1.png");
+    background-image: url("./logo1.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -98,25 +173,17 @@ nav .home {
     line-height: 4px;
     width: 100%;
     text-align: center;
-
-
 }
 
 .home-mobile a {
-    color: var(--color--white);
+    color: var(--color--black);
     border: 1px solid transparent;
    /* border-radius: px;*/
     text-decoration: none;
     padding: 0, auto ;
     z-index: 1;
     font-size: 30px;
-}
-
-.home-mobile a.active,
-.home-mobile a:hover {
-    border: none;
-    color:aqua;
-    font-weight:bold;
+    font-family: var(--main-font);
 }
 
 nav .icon {
@@ -135,7 +202,7 @@ nav .icon {
     position: fixed;
     width: 42%;
     border: 2px solid var(--color--black);
-   
+    z-index: 5;
 }
 
 .home-mobile {
@@ -150,7 +217,6 @@ footer {
     width: 100%;
     padding: 10px 50px;
     background: #000000;
-    margin-top: 100vh;
 }
 
 footer .reviews {
@@ -176,40 +242,160 @@ footer .copy {
     color: #fff;
 }
 
-/*–––––––––––––––––––––––––––––––––––––––––––––––––– HEADER –––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* ICI LE CODE DE CHARLIE */
+/*
+––––––––––––––––––––––––––––––––––––––––––––––––––
+HEADER
+––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+header {
+    background-color: var(--color--black);
+    color: var(--color--white);
 
+    box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.1), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+}
+header .header__content {
+    padding: 1rem 1rem 500px 1rem;
+    position: relative;
+    z-index: 0;
+}
+header .header__content:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 550px;
+    opacity: 0.6;
+    z-index: -1;
+    background-image: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%), url("https://images.unsplash.com/photo-1577640905050-83665af216b9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+header .header__content h1 {
+    margin-bottom: 1rem;
+}
+header .key-figures {
+    overflow: hidden;
+}
+header .key-figures .key-figures__list {
+    display: flex;
+}
+header .key-figures .key-figures__list .key-figure {
+    flex-shrink: 0;
+    width: 80vw;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    justify-content: center;
+}
+header .key-figures .key-figures__list .key-figure:nth-of-type(even) {
+    background-color: var(--color--white);
+    color: var(--color--black);
+}
+header .key-figures .key-figures__list .key-figure i {
+    font-size: 66px;
+}
+header .key-figures .key-figures__list .key-figure .key-figure__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    letter-spacing: -0.02em;
+    font-weight: 500;
+    font-family: var(--main-font);
+}
+header .key-figures .key-figures__list .key-figure .key-figure__description {
+    margin-bottom: 0;
+}
 
 /*
 ––––––––––––––––––––––––––––––––––––––––––––––––––
-BIOGRAPHIE
+BIOGRAPHY
 ––––––––––––––––––––––––––––––––––––––––––––––––––
 */
 
-/* ICI LE CODE DE HUGO */
+#biographie {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 1.6rem;
+}
 
+#biographie .wrapper {
+    width: 100%;
+    border: 1px solid #d9d9d9;
+    box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin: 1.9rem 0;
+}
+
+#biographie .block-video:not(:first-child) {
+    border-top: 1px solid #d9d9d9;
+}
+
+#biographie .video {
+    height: 0;
+    overflow: hidden;
+}
+
+#biographie iframe {
+    width: 100%;
+    padding: 0.6rem 1.25rem;
+}
+
+#biographie .btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6rem;
+}
+
+#biographie h2 {
+    margin: 0;
+}
+
+#biographie h3 {
+    margin: 0;
+}
+
+#biographie .subpart h3 {
+    padding: 1rem 0;
+}
+
+#biographie .subpart p {
+    margin: 0;
+}
+#biographie i {
+    font-size: 2rem;
+}
+
+#biographie i::before {
+    transition: transform 1s ease;
+}
+
+#biographie .active i::before {
+    transform: rotate(180deg);
+}
+
+#biographie .active .video {
+    height: max-content;
+}
 
 /*
 ––––––––––––––––––––––––––––––––––––––––––––––––––
 DISCOGRAPHIE
 ––––––––––––––––––––––––––––––––––––––––––––––––––
 */
-
 /* ICI LE CODE DE OTHMAN */
-
-
 /*
 ––––––––––––––––––––––––––––––––––––––––––––––––––
 FOOTER
 ––––––––––––––––––––––––––––––––––––––––––––––––––
 */
-
 /* ICI LE CODE DE JUNIOR */
 
-
-
 @media screen and (min-width: 768px) {
-
     /*
     ––––––––––––––––––––––––––––––––––––––––––––––––––
     HEADINGS
@@ -231,6 +417,16 @@ FOOTER
     h3 {
         font-size: 1.5rem;
         line-height: 2rem;
+    }
+
+    /*
+    ––––––––––––––––––––––––––––––––––––––––––––––––––
+    LOADER
+    ––––––––––––––––––––––––––––––––––––––––––––––––––
+    */
+    #loader img {
+        width: 15vw;
+        height: 15vw;
     }
 
     /*
@@ -331,17 +527,125 @@ FOOTER
     ––––––––––––––––––––––––––––––––––––––––––––––––––
     */
 
-    /* ICI LE CODE DE CHARLIE */
-
+    header {
+        display: flex;
+        border-radius: 0 0 48px 48px;
+        overflow: hidden;
+        height: 100%;
+        box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.1), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+        margin-bottom: 30px;
+    }
+    header .header__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 80vh;
+        flex: 2;
+        padding: 5rem 20rem 5rem 5rem;
+        z-index: 0;
+        height: 100%;
+        position: relative;
+    }
+    header .header__content:before {
+        content: " ";
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 40%;
+        height: 100%;
+        opacity: 0.6;
+        z-index: -1;
+        background-image: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 100%), url("https://images.unsplash.com/photo-1577640905050-83665af216b9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    header .header__content h1 {
+        margin-bottom: 1rem;
+        max-width: 80%;
+    }
+    header .header__content h2 {
+        max-width: 80%;
+    }
+    header .key-figures {
+        flex: 1;
+        overflow: hidden;
+        height: 100%;
+        display: block;
+    }
+    header .key-figures .key-figures__list {
+        height: 100vh;
+        flex-direction: column;
+    }
+    header .key-figures .key-figures__list .key-figure {
+        flex-shrink: 0;
+        width: 100%;
+        height: 33.3333333333%;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    header .key-figures .key-figures__list .key-figure i {
+        font-size: 66px;
+    }
+    header .key-figures .key-figures__list .key-figure .key-figure__title {
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+        letter-spacing: -0.02em;
+        font-weight: 500;
+        font-family: var(--main-font);
+        margin-top: 1rem;
+    }
 
     /*
     ––––––––––––––––––––––––––––––––––––––––––––––––––
     BIOGRAPHIE
     ––––––––––––––––––––––––––––––––––––––––––––––––––
     */
+    #biographie {
+        flex-direction: row;
+    }
 
-    /* ICI LE CODE DE HUGO */
+    #biographie .wrapper {
+        margin: 1.9rem;
+        width: 70%;
+        height: 50%;
+        position: sticky;
+        top: calc(70px + 1.9rem);
+        bottom: 55px;
+    }
 
+    #biographie .btn {
+        cursor: pointer;
+    }
+
+    #biographie .btn:hover i {
+        animation: upAndDown 0.5s alternate infinite;
+    }
+
+    @keyframes upAndDown {
+        0% {
+            transform: translateY(5px);
+        }
+        100% {
+            transform: translateY(-5px);
+        }
+    }
+
+    #biographie .text-biography {
+        margin: 30px;
+        width: 70%;
+        border: 1px solid #d9d9d9;
+        box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.3);
+        border-radius: 0.6rem;
+        padding: 1.25rem;
+    }
+
+    #biographie .subpart p {
+        text-align: start;
+    }
 
     /*
     ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -350,7 +654,6 @@ FOOTER
     */
 
     /* ICI LE CODE DE OTHMAN */
-
 
     /*
     ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -370,7 +673,6 @@ FOOTER
         padding: 20px 50px;
         background: #000000;
         /* Noir */
-        margin-top: 100vh;
         font-family: var(--main-font);
 
     }
