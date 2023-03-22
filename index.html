@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,18 +10,30 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
         <title>Michael JACKSON</title>
     </head>
+
     <body onload="displayWhenLoaded()">
         <div id="loader">
             <img src="https://cdn.dribbble.com/users/1854961/screenshots/11022550/media/d7d2c8d82d490d52f6f5a28cb240b592.gif" alt="" />
             <p>Loading...</p>
         </div>
         <nav>
-            <!-- ICI LE CODE DE JUNIOR -->
+            <div id="logo"></div>
+            <ul class="home">
+                <li><a href="#header">Présentation</a></li>
+                <li><a href="#biographie">Biographie</a></li>
+                <li><a href="#discographie">Discographie</a></li>
+            </ul>
+
+            <label class="icon"><i class="bi bi-list"></i></label>
         </nav>
+        <ul class="home-mobile">
+            <li><a href="#header">Présentation</a></li>
+            <li><a href="#biographie">Biographie</a></li>
+            <li><a href="#discographie">Discographie</a></li>
+        </ul>
         <div id="button-top"><i class="bi bi-arrow-bar-up"></i></div>
 
-        <header>
-            <!-- ICI LE CODE DE CHARLIE -->
+        <header id="header">
             <div class="header__content">
                 <h1>Michael JACKSON : Le Roi de la Pop</h1>
                 <h2>Une icône de la musique pop</h2>
@@ -105,6 +118,22 @@
 
         <footer>
             <!-- ICI LE CODE DE JUNIOR -->
+            <p class="copy">&copy; Copyright 2023 reserved.</p>
+
+            <ul class="reviews">
+                <li>
+                    <a href="https://www.facebook.com/michaeljackson" target="_blank"><i class="bi bi-facebook"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/michaeljackson/" target="_blank"><i class="bi bi-instagram"></i></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/michaeljackson" target="_blank"><i class="bi bi-twitter"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.tiktok.com/@michael_jackson_king1" target="_blank"><i class="bi bi-tiktok"></i></a>
+                </li>
+            </ul>
         </footer>
         <script src="main.js"></script>
     </body>
