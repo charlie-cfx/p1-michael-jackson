@@ -74,55 +74,72 @@ DISCOGRAPHIE
 */
 
 /* ICI LE CODE DE OTHMAN */
+/* SECTION MOBILE  */
+
+#discographie input {
+  display: none;
+}
+/* CHANGEMENT */
 .discograpy-carrousel {
   background-color: #000;
-  /* height: 100vh; */
   border-radius: 30px;
+  height: 100vh;
 }
-h2 {
+.container {
+  height: 80vh;
+}
+#discographie .carrousel-container {
+  height: 95%;
+  position: relative;
+}
+#discographie label {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+#discographie label iframe {
+  height: 100%;
+  width: 70%;
+}
+
+/* FIN CHANGEMENT  */
+#discographie h2 {
   color: #fff;
   font-size: 2.5rem;
+  font-family: var(--main-font);
 }
 .discograpy-carrousel h2 {
   padding: 25px;
 }
-.carrousel-container {
-  /* height: 65vh; */
+#discographie .dots-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
+  gap: 30px;
 }
-
-.carrousel-slides .main-widget {
-  border-radius: 10px;
-  height: 60vh;
-}
-.slide1 iframe,
-.slide3 iframe {
-  display: none;
-}
-.dots-container {
-  display: none;
-}
-.arrows-mobile {
-  margin-top: 3%;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 80px;
-}
-.arrows-mobile .mobile-left-arrow,
-.arrows-mobile .mobile-right-arrow {
-  width: 15vw;
-  height: 15vw;
+#discographie .dots {
+  width: 5vw;
+  height: 5vw;
   border-radius: 50%;
   background-color: #fff;
-  padding: 5px;
   cursor: pointer;
+  opacity: 0.5;
 }
-.jackson-background {
+#discographie .dots-container #white {
+  opacity: 1;
+}
+#discographie .carrousel-slides {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+#discographie .carrousel-slides.visible {
+  opacity: 1;
+}
+#discographie .jackson-background {
   display: none;
 }
 /*
@@ -188,49 +205,57 @@ FOOTER
     */
 
   /* ICI LE CODE DE OTHMAN */
-  /* SECTION MOBILE  */
 
+  #discographie h2 {
+    color: #fff;
+  }
   .discograpy-carrousel {
-    background-color: #000;
-    /* background-image: url("https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F7%2F70%2FMichael_Jackson_%252820589951783%2529.jpg%2F1200px-Michael_Jackson_%252820589951783%2529.jpg");
-    background-repeat: no-repeat;
-    background-size: cover; */
     margin: 30px;
-    border-radius: 30px;
     overflow: hidden;
     position: relative;
     z-index: 2;
   }
-  h2 {
-    color: #fff;
+  #discographie .carrousel-slides {
+    opacity: 1;
+    transition: transform 0.6s ease;
   }
-  .carrousel-container {
-    /* height: 70vh; */
+  #discographie .container {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 70px;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+  }
+  #discographie .carrousel-container {
+    height: 100vh;
+    width: 100vw;
+    margin-bottom: 50px;
+  }
+  #discographie label {
+    width: 30%;
+    left: 35%;
+    cursor: pointer;
   }
 
-  .carrousel-slides img {
+  #discographie iframe {
+    height: calc(100% - 40px);
+  }
+
+  #discographie .carrousel-slides .main-widget {
+    border-radius: 10px;
+    height: 60vh;
+  }
+  #discographie .carrousel-slides iframe {
     border-radius: 10px;
     margin-top: 35px;
-    height: 50vh;
+    height: 60vh;
     z-index: 2;
   }
-  .slide1 img,
-  .slide3 img {
-    display: block;
-  }
-  iframe.switchable-img {
-    filter: blur(1.5px);
-    height: 13vw;
-    width: 13vw;
-    opacity: 0.7;
-    display: flex;
-  }
-
-  .jackson-background {
+  #discographie .jackson-background {
     display: block;
     position: absolute;
     z-index: -1;
@@ -238,62 +263,94 @@ FOOTER
     height: 100%;
     right: 0;
     bottom: 0;
-    /* margin: 10px 15px 20px 15px; */
     border-radius: 10px;
     object-fit: cover;
     opacity: 0.4;
   }
-  #left-bloc {
-    /* border: 3px solid brown; */
-    margin-right: 1%;
-  }
-  .arrow-container-left,
-  .arrow-container-right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50%;
-  }
-  .arrow-container-left .left-arrow,
-  .arrow-container-right .right-arrow {
-    width: 4vw;
-    height: 4vw;
-    border-radius: 50%;
-    background-color: #fff;
-    padding: 5px;
-    cursor: pointer;
-  }
-  .arrow-container-left {
-    margin-top: 60%;
-  }
 
-  .left-arrow {
-    align-self: flex-end;
-  }
-  .right-arrow {
-    align-self: flex-start;
-  }
   .discograpy-carrousel h2 {
     text-align: center;
     padding-top: 130px;
+    font-family: var(--main-font);
   }
 
-  .dots-container {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 25px;
+  #discographie #item-1:checked ~ .carrousel-container #song-3,
+  #discographie #item-2:checked ~ .carrousel-container #song-1,
+  #discographie #item-3:checked ~ .carrousel-container #song-2 {
+    transform: translatex(-90%) scale(0.5);
+
+    z-index: 0;
   }
-  .dots {
-    width: 1vw;
-    height: 1vw;
-    border: 3px solid grey;
-    border-radius: 50%;
-    background-color: grey;
+  #discographie #item-1:checked ~ .carrousel-container #song-2,
+  #discographie #item-2:checked ~ .carrousel-container #song-3,
+  #discographie #item-3:checked ~ .carrousel-container #song-1 {
+    transform: translatex(90%) scale(0.5);
+
+    z-index: 0;
   }
-  .arrows-mobile {
+  #discographie #item-1:checked ~ .carrousel-container #song-1,
+  #discographie #item-2:checked ~ .carrousel-container #song-2,
+  #discographie #item-3:checked ~ .carrousel-container #song-3 {
+    transform: translatex(0) scale(1);
+    opacity: 1;
+    z-index: 1;
+  }
+  #discographie #item-1:checked ~ .carrousel-container #song-3 iframe,
+  #discographie #item-2:checked ~ .carrousel-container #song-1 iframe,
+  #discographie #item-3:checked ~ .carrousel-container #song-2 iframe {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+  #discographie #item-1:checked ~ .carrousel-container #song-2 iframe,
+  #discographie #item-2:checked ~ .carrousel-container #song-3 iframe,
+  #discographie #item-3:checked ~ .carrousel-container #song-1 iframe {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  #discographie
+    #item-1:checked
+    ~ .carrousel-container
+    #song-2
+    .arrow-container
+    .arrow,
+  #discographie
+    #item-2:checked
+    ~ .carrousel-container
+    #song-3
+    .arrow-container
+    .arrow,
+  #discographie
+    #item-3:checked
+    ~ .carrousel-container
+    #song-1
+    .arrow-container
+    .arrow {
+    transform: rotate(180deg);
+    opacity: 1;
+  }
+  #discographie
+    #item-1:checked
+    ~ .carrousel-container
+    #song-1
+    .arrow-container
+    .arrow,
+  #discographie
+    #item-2:checked
+    ~ .carrousel-container
+    #song-2
+    .arrow-container
+    .arrow,
+  #discographie
+    #item-3:checked
+    ~ .carrousel-container
+    #song-3
+    .arrow-container
+    .arrow {
+    display: none;
+  }
+
+  #discographie .dots-container {
     display: none;
   }
 

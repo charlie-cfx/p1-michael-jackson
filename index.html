@@ -22,93 +22,61 @@
     </section>
 
     <!-- SECTION OTHMAN -->
-    <section class="carrousel discograpy-carrousel">
+    <section class="carrousel discograpy-carrousel" id="discographie">
       <h2>Discographie</h2>
-      <div class="carrousel-container">
-        <div class="carrousel-slides slide1" id="left-bloc">
-          <!-- <img
-            src="https://fastly.picsum.photos/id/866/200/300.jpg?hmac=rcadCENKh4rD6MAp6V_ma-AyWv641M4iiOpe1RyFHeI"
-            alt="" -->
-          <iframe
-            title="deezer-widget"
-            src="https://widget.deezer.com/widget/dark/album/1441212?tracklist=false"
-            frameborder="0"
-            allowtransparency="true"
-            allow="encrypted-media; clipboard-write"
-            class="switchable-img"
-          ></iframe>
+      <div class="container">
+        <input type="radio" name="slider" id="item-1" checked />
+        <input type="radio" name="slider" id="item-2" />
+        <input type="radio" name="slider" id="item-3" />
 
-          <!-- /> -->
-          <div class="arrow-container-left">
-            <img
-              src="images/chevron-left.svg"
-              alt="left-arrow"
-              class="left-arrow"
-            />
-          </div>
+        <div class="carrousel-container">
+          <label for="item-2" class="carrousel-slides slide1" id="song-2">
+            <iframe
+              title="deezer-widget"
+              src="https://widget.deezer.com/widget/dark/album/1441212?tracklist=false"
+              frameborder="0"
+              allowtransparency="true"
+              allow="encrypted-media; clipboard-write"
+              class="switchable-img iframe1"
+            ></iframe>
+          </label>
+          <label
+            for="item-1"
+            class="carrousel-slides slide2 visible"
+            id="song-1"
+          >
+            <iframe
+              title="deezer-widget"
+              src="https://widget.deezer.com/widget/dark/album/96126?tracklist=false"
+              frameborder="0"
+              allowtransparency="true"
+              allow="encrypted-media; clipboard-write"
+              class="main-widget iframe2"
+            ></iframe>
+          </label>
+
+          <label for="item-3" class="carrousel-slides slide3" id="song-3">
+            <iframe
+              title="deezer-widget"
+              src="https://widget.deezer.com/widget/dark/album/228321?tracklist=false"
+              frameborder="0"
+              allowtransparency="true"
+              allow="encrypted-media; clipboard-write"
+              class="switchable-img iframe3"
+            ></iframe>
+          </label>
         </div>
-        <div class="carrousel-slides slide2">
-          <iframe
-            title="deezer-widget"
-            src="https://widget.deezer.com/widget/dark/album/96126?tracklist=false"
-            frameborder="0"
-            allowtransparency="true"
-            allow="encrypted-media; clipboard-write"
-            class="main-widget"
-          ></iframe>
-          <!-- <img
-            src="https://fastly.picsum.photos/id/866/200/300.jpg?hmac=rcadCENKh4rD6MAp6V_ma-AyWv641M4iiOpe1RyFHeI"
-            alt=""
-            class="main-image" -->
-          />
-          <div class="dots-container">
-            <div class="dots"></div>
-            <div class="dots"></div>
-            <div class="dots"></div>
-          </div>
+        <div class="dots-container">
+          <div class="dots dot1"></div>
+          <div class="dots dot2" id="white"></div>
+          <div class="dots dot3"></div>
         </div>
-
-        <div class="carrousel-slides slide3">
-          <!-- <img
-            src="https://fastly.picsum.photos/id/866/200/300.jpg?hmac=rcadCENKh4rD6MAp6V_ma-AyWv641M4iiOpe1RyFHeI"
-            alt="" -->
-          <iframe
-            title="deezer-widget"
-            src="https://widget.deezer.com/widget/dark/album/228321?tracklist=false"
-            frameborder="0"
-            allowtransparency="true"
-            allow="encrypted-media; clipboard-write"
-            class="switchable-img"
-          ></iframe>
-
-          />
-
-          <div class="arrow-container-right">
-            <img
-              src="images/chevron-right.svg"
-              alt="right-arrow"
-              class="right-arrow"
-            />
-          </div>
-        </div>
-        <img
-          src="images/michael-jackson-bg.png"
-          alt="michel jackson"
-          class="jackson-background"
-        />
       </div>
-      <div class="arrows-mobile">
-        <img
-          src="images/chevron-left.svg"
-          alt="left-arrow"
-          class="mobile-left-arrow"
-        />
-        <img
-          src="images/chevron-right.svg"
-          alt="right-arrow"
-          class="mobile-right-arrow"
-        />
-      </div>
+      <img
+        src="/images/michael-jackson-bg.png"
+        alt="michel jackson"
+        class="jackson-background"
+      />
     </section>
 
     <footer>
