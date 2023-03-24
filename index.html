@@ -1,343 +1,165 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
-    />
-    <title>Michael JACKSON</title>
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+        <link rel="stylesheet" href="reset.css" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+        <title>Michael JACKSON</title>
+    </head>
 
-  <body onload="displayWhenLoaded()">
-    <div id="loader">
-      <img
-        src="https://cdn.dribbble.com/users/1854961/screenshots/11022550/media/d7d2c8d82d490d52f6f5a28cb240b592.gif"
-        alt=""
-      />
-      <p>Loading...</p>
-    </div>
-    <nav>
-      <div id="logo"></div>
-      <ul class="home">
-        <li><a href="#header">Présentation</a></li>
-        <li><a href="#biographie">Biographie</a></li>
-        <li><a href="#discographie">Discographie</a></li>
-      </ul>
-
-      <label class="icon"><i class="bi bi-list"></i></label>
-    </nav>
-    <ul class="home-mobile">
-      <li><a href="#header">Présentation</a></li>
-      <li><a href="#biographie">Biographie</a></li>
-      <li><a href="#discographie">Discographie</a></li>
-    </ul>
-    <div id="button-top"><i class="bi bi-arrow-bar-up"></i></div>
-
-    <header id="header">
-      <div class="header__content">
-        <h1>Michael JACKSON : Le Roi de la Pop</h1>
-        <h2>Une icône de la musique pop</h2>
-        <p>
-          Michael Jackson, de son nom complet Michael Joseph Jackson, est sans
-          conteste l'un des artistes les plus emblématiques de l'histoire de la
-          musique pop. Né le 29 août 1958 à Gary dans l'Indiana, il a commencé
-          sa carrière musicale à l'âge de 5 ans en tant que membre des Jackson
-          5, un groupe de musique composé de ses frères et de lui-même. Au fil
-          des années, il a lancé sa carrière solo et a conquis des millions de
-          fans à travers le monde grâce à son talent, sa créativité et son style
-          unique.
-        </p>
-        <h2>Un héritage indélébile</h2>
-        <p>
-          Bien que sa vie personnelle ait été marquée par des controverses,
-          Michael Jackson a laissé derrière lui un héritage indélébile dans le
-          monde de la musique. Ses chansons intemporelles telles que "Thriller",
-          "Billie Jean" et "Beat It", ont marqué plusieurs générations et
-          continuent d'être écoutées par des fans du monde entier. Sa
-          chorégraphie inimitable, notamment dans le clip de "Thriller" est
-          devenue une référence dans le monde de la danse. Il a également été un
-          précurseur dans l'utilisation de la vidéo clip pour promouvoir ses
-          chansons. Son influence sur la culture populaire reste indéniable,
-          comme en témoigne la récente comédie musicale "MJ" qui retrace sa vie
-          et son oeuvre. Ainsi, Michael Jackson continue d'inspirer les artistes
-          d'aujourd'hui et de demain, avec son talent et sa créativité
-          intemporels.
-        </p>
-      </div>
-
-      <div class="key-figures">
-        <div class="key-figures__list"></div>
-      </div>
-    </header>
-
-    <section id="biographie">
-      <div class="wrapper">
-        <div class="block-video">
-          <div class="btn">
-            <h3>Son histoire</h3>
-            <i class="bi bi-chevron-down"></i>
-          </div>
-          <div class="video">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/doitd4Axxfk"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            >
-            </iframe>
-          </div>
+    <body onload="displayWhenLoaded()">
+        <div id="loader">
+            <img src="https://cdn.dribbble.com/users/1854961/screenshots/11022550/media/d7d2c8d82d490d52f6f5a28cb240b592.gif" alt="" />
+            <p>Loading...</p>
         </div>
-        <div class="block-video">
-          <div class="btn">
-            <h3>Concert</h3>
-            <i class="bi bi-chevron-down"></i>
-          </div>
-          <div class="video">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/Hxgo-Qu-ZZE"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
-          </div>
-        </div>
-        <div class="block-video">
-          <div class="btn">
-            <h3>Top Dance Moves</h3>
-            <i class="bi bi-chevron-down"></i>
-          </div>
-          <div class="video">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/OzpwbPocS6s"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
-          </div>
-        </div>
-        <div class="block-video">
-          <div class="btn">
-            <h3>Evolution Dance Moves</h3>
-            <i class="bi bi-chevron-down"></i>
-          </div>
-          <div class="video">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/RztUdknG9H4"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
-          </div>
-        </div>
-        <div class="block-video">
-          <div class="btn">
-            <h3>Moonwalk Tutoriel</h3>
-            <i class="bi bi-chevron-down"></i>
-          </div>
-          <div class="video">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/T4Fma4uNVsQ"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
-          </div>
-        </div>
-      </div>
-      <div class="text-biography">
-        <h2>Biographie</h2>
-        <div class="subpart">
-          <h3>Enfance</h3>
-          <p>
-            Michael Jackson est né le 29 août 1958 à Gary, dans l'Indiana, aux
-            États-Unis. Il était le huitième enfant de la famille Jackson. Son
-            père, Joseph Jackson, était ouvrier dans une aciérie et sa mère,
-            Katherine Jackson, s'occupait de la maison et de ses enfants. La
-            famille Jackson était très pauvre, mais aimante. Michael a grandi
-            dans un petit appartement avec ses frères et sœurs, partageant une
-            chambre avec ses frères aînés. Malgré les difficultés financières,
-            la famille Jackson était très impliquée dans l'église locale et la
-            musique. Les enfants ont rapidement montré des talents musicaux, et
-            le père de Michael a créé un groupe de musique familial, "The
-            Jackson 5", pour promouvoir les talents de ses enfants.
-          </p>
-          <h3>Débuts de carrière</h3>
-          <p>
-            Michael Jackson a commencé sa carrière musicale en tant que membre
-            du groupe familial The Jackson 5, créé par son père en 1964. Le
-            groupe était composé de Michael et ses frères aînés : Jackie, Tito,
-            Jermaine, et Marlon. The Jackson 5 ont commencé à se produire dans
-            des spectacles locaux et ont attiré l'attention d'un représentant de
-            la Motown Records, qui les a signés en 1969. Leur premier single, "I
-            Want You Back", a été un succès instantané et a lancé leur carrière
-            musicale. Le groupe a ensuite sorti une série de singles à succès,
-            notamment "ABC", "The Love You Save" et "I'll Be There", qui ont
-            tous atteint la première place des charts aux États-Unis. Michael
-            Jackson a rapidement émergé comme la star du groupe, avec sa voix
-            distinctive, ses mouvements de danse uniques et son charisme sur
-            scène. Il est devenu le chanteur principal du groupe et a commencé à
-            écrire et à produire des chansons pour le groupe. Michael a quitté
-            le groupe en 1979 pour poursuivre une carrière solo.
-          </p>
-          <h3>Débuts de sa carrière solo</h3>
-          <p>
-            Avant de connaître un succès mondial avec l'album "Thriller",
-            Michael Jackson a connu des débuts prometteurs en tant qu'artiste
-            solo. Après avoir quitté le groupe The Jackson 5, il a signé un
-            contrat avec la maison de disques Epic Records et a sorti son
-            premier album solo, "Off the Wall", en 1979. L'album a été produit
-            par Quincy Jones et a été un succès commercial et critique, bien que
-            moins grand que "Thriller" à venir. Les singles "Don't Stop 'Til You
-            Get Enough" et "Rock With You" ont atteint les sommets des charts
-            américains, et l'album a remporté un Grammy Award. "Off the Wall" a
-            également permis à Michael Jackson de développer son style musical,
-            qui comprenait des éléments de funk, de soul et de pop. Après le
-            succès de "Off the Wall", Michael Jackson a commencé à travailler
-            sur un nouvel album, qui deviendrait plus tard "Thriller".
-          </p>
-          <h3>Succès mondial</h3>
-          <p>
-            Michael Jackson est devenu une star mondiale au cours des années
-            1980, avec sa musique, ses clips, et ses performances scéniques. Ses
-            performances lors de la tournée "Thriller" ont été un événement
-            culturel majeur, avec des effets spéciaux de pointe et des
-            chorégraphies uniques. Au cours de sa carrière, Michael Jackson a
-            sorti plusieurs autres albums à succès, dont "Bad", "Dangerous" et
-            "HIStory", qui ont tous produit des hits mondiaux tels que "Bad",
-            "Black or White" et "You Are Not Alone". Il a également été impliqué
-            dans de nombreuses œuvres de charité et a utilisé sa célébrité pour
-            attirer l'attention sur des problèmes sociaux tels que la famine en
-            Afrique et les droits des enfants.
-          </p>
-          <h3>Mort</h3>
-          <p>
-            Michael Jackson est décédé le 25 juin 2009 à l'âge de 50 ans. Sa
-            mort a été un choc pour le monde entier et a déclenché une vague
-            d'hommages et de commémorations à travers le globe. Les causes de la
-            mort de Michael Jackson ont été initialement attribuées à un arrêt
-            cardiaque, mais des enquêtes ultérieures ont révélé que sa mort
-            était due à une overdose accidentelle de médicaments sur ordonnance.
-            Le médecin personnel de Michael Jackson, Conrad Murray, a été accusé
-            d'homicide involontaire et condamné à quatre ans de prison. La mort
-            de Michael Jackson a suscité une grande tristesse et un énorme
-            intérêt du public, avec des millions de fans du monde entier
-            pleurant sa disparition. Les hommages ont été nombreux, notamment
-            des concerts commémoratifs, des documentaires et des expositions
-            consacrées à sa vie et à son héritage. Sa musique continue d'être
-            écoutée et appréciée par des millions de personnes dans le monde
-            entier.
-          </p>
-        </div>
-      </div>
-    </section>
+        <nav>
+            <div id="logo"></div>
+            <ul class="home">
+                <li><a href="#header">Présentation</a></li>
+                <li><a href="#biographie">Biographie</a></li>
+                <li><a href="#discographie">Discographie</a></li>
+            </ul>
 
-    <!-- SECTION OTHMAN -->
-    <section class="carrousel discograpy-carrousel" id="discographie">
-      <h2>Discographie</h2>
-      <div class="container">
-        <input type="radio" name="slider" id="item-1" checked />
-        <input type="radio" name="slider" id="item-2" />
-        <input type="radio" name="slider" id="item-3" />
+            <label class="icon"><i class="bi bi-list"></i></label>
+        </nav>
+        <ul class="home-mobile">
+            <li><a href="#header">Présentation</a></li>
+            <li><a href="#biographie">Biographie</a></li>
+            <li><a href="#discographie">Discographie</a></li>
+        </ul>
+        <div id="button-top"><i class="bi bi-arrow-bar-up"></i></div>
 
-        <div class="carrousel-container">
-          <label for="item-2" class="carrousel-slides slide1" id="song-2">
-            <iframe
-              title="deezer-widget"
-              src="https://widget.deezer.com/widget/dark/album/1441212?tracklist=false"
-              frameborder="0"
-              allowtransparency="true"
-              allow="encrypted-media; clipboard-write"
-              class="switchable-img iframe1"
-            ></iframe>
-          </label>
-          <label
-            for="item-1"
-            class="carrousel-slides slide2 visible"
-            id="song-1"
-          >
-            <iframe
-              title="deezer-widget"
-              src="https://widget.deezer.com/widget/dark/album/96126?tracklist=false"
-              frameborder="0"
-              allowtransparency="true"
-              allow="encrypted-media; clipboard-write"
-              class="main-widget iframe2"
-            ></iframe>
-          </label>
+        <header id="header">
+            <div class="header__content">
+                <h1>Michael JACKSON : Le Roi de la Pop</h1>
+                <h2>Une icône de la musique pop</h2>
+                <p>Michael Jackson, de son nom complet Michael Joseph Jackson, est sans conteste l'un des artistes les plus emblématiques de l'histoire de la musique pop. Né le 29 août 1958 à Gary dans l'Indiana, il a commencé sa carrière musicale à l'âge de 5 ans en tant que membre des Jackson 5, un groupe de musique composé de ses frères et de lui-même. Au fil des années, il a lancé sa carrière solo et a conquis des millions de fans à travers le monde grâce à son talent, sa créativité et son style unique.</p>
+                <h2>Un héritage indélébile</h2>
+                <p>Bien que sa vie personnelle ait été marquée par des controverses, Michael Jackson a laissé derrière lui un héritage indélébile dans le monde de la musique. Ses chansons intemporelles telles que "Thriller", "Billie Jean" et "Beat It", ont marqué plusieurs générations et continuent d'être écoutées par des fans du monde entier. Sa chorégraphie inimitable, notamment dans le clip de "Thriller" est devenue une référence dans le monde de la danse. Il a également été un précurseur dans l'utilisation de la vidéo clip pour promouvoir ses chansons. Son influence sur la culture populaire reste indéniable, comme en témoigne la récente comédie musicale "MJ" qui retrace sa vie et son oeuvre. Ainsi, Michael Jackson continue d'inspirer les artistes d'aujourd'hui et de demain, avec son talent et sa créativité intemporels.</p>
+            </div>
 
-          <label for="item-3" class="carrousel-slides slide3" id="song-3">
-            <iframe
-              title="deezer-widget"
-              src="https://widget.deezer.com/widget/dark/album/228321?tracklist=false"
-              frameborder="0"
-              allowtransparency="true"
-              allow="encrypted-media; clipboard-write"
-              class="switchable-img iframe3"
-            ></iframe>
-          </label>
-        </div>
-        <div class="dots-container">
-          <div class="dots dot1"></div>
-          <div class="dots dot2" id="white"></div>
-          <div class="dots dot3"></div>
-        </div>
-      </div>
-      <img
-        src="./images/michael-jackson-bg.png"
-        alt="michel jackson"
-        class="jackson-background"
-      />
-    </section>
+            <div class="key-figures">
+                <div class="key-figures__list"></div>
+            </div>
+        </header>
 
-    <footer>
-      <!-- ICI LE CODE DE JUNIOR -->
-      <p class="copy">&copy; Copyright 2023 reserved.</p>
+        <section id="biographie">
+            <div class="wrapper">
+                <div class="block-video">
+                    <div class="btn">
+                        <h3>Son histoire</h3>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="video">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/doitd4Axxfk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen> </iframe>
+                    </div>
+                </div>
+                <div class="block-video">
+                    <div class="btn">
+                        <h3>Concert</h3>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="video">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Hxgo-Qu-ZZE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="block-video">
+                    <div class="btn">
+                        <h3>Top Dance Moves</h3>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="video">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/OzpwbPocS6s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="block-video">
+                    <div class="btn">
+                        <h3>Evolution Dance Moves</h3>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="video">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/RztUdknG9H4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="block-video">
+                    <div class="btn">
+                        <h3>Moonwalk Tutoriel</h3>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="video">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/T4Fma4uNVsQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="text-biography">
+                <h2>Biographie</h2>
+                <div class="subpart">
+                    <h3>Enfance</h3>
+                    <p>Michael Jackson est né le 29 août 1958 à Gary, dans l'Indiana, aux États-Unis. Il était le huitième enfant de la famille Jackson. Son père, Joseph Jackson, était ouvrier dans une aciérie et sa mère, Katherine Jackson, s'occupait de la maison et de ses enfants. La famille Jackson était très pauvre, mais aimante. Michael a grandi dans un petit appartement avec ses frères et sœurs, partageant une chambre avec ses frères aînés. Malgré les difficultés financières, la famille Jackson était très impliquée dans l'église locale et la musique. Les enfants ont rapidement montré des talents musicaux, et le père de Michael a créé un groupe de musique familial, "The Jackson 5", pour promouvoir les talents de ses enfants.</p>
+                    <h3>Débuts de carrière</h3>
+                    <p>Michael Jackson a commencé sa carrière musicale en tant que membre du groupe familial The Jackson 5, créé par son père en 1964. Le groupe était composé de Michael et ses frères aînés : Jackie, Tito, Jermaine, et Marlon. The Jackson 5 ont commencé à se produire dans des spectacles locaux et ont attiré l'attention d'un représentant de la Motown Records, qui les a signés en 1969. Leur premier single, "I Want You Back", a été un succès instantané et a lancé leur carrière musicale. Le groupe a ensuite sorti une série de singles à succès, notamment "ABC", "The Love You Save" et "I'll Be There", qui ont tous atteint la première place des charts aux États-Unis. Michael Jackson a rapidement émergé comme la star du groupe, avec sa voix distinctive, ses mouvements de danse uniques et son charisme sur scène. Il est devenu le chanteur principal du groupe et a commencé à écrire et à produire des chansons pour le groupe. Michael a quitté le groupe en 1979 pour poursuivre une carrière solo.</p>
+                    <h3>Débuts de sa carrière solo</h3>
+                    <p>Avant de connaître un succès mondial avec l'album "Thriller", Michael Jackson a connu des débuts prometteurs en tant qu'artiste solo. Après avoir quitté le groupe The Jackson 5, il a signé un contrat avec la maison de disques Epic Records et a sorti son premier album solo, "Off the Wall", en 1979. L'album a été produit par Quincy Jones et a été un succès commercial et critique, bien que moins grand que "Thriller" à venir. Les singles "Don't Stop 'Til You Get Enough" et "Rock With You" ont atteint les sommets des charts américains, et l'album a remporté un Grammy Award. "Off the Wall" a également permis à Michael Jackson de développer son style musical, qui comprenait des éléments de funk, de soul et de pop. Après le succès de "Off the Wall", Michael Jackson a commencé à travailler sur un nouvel album, qui deviendrait plus tard "Thriller".</p>
+                    <h3>Succès mondial</h3>
+                    <p>Michael Jackson est devenu une star mondiale au cours des années 1980, avec sa musique, ses clips, et ses performances scéniques. Ses performances lors de la tournée "Thriller" ont été un événement culturel majeur, avec des effets spéciaux de pointe et des chorégraphies uniques. Au cours de sa carrière, Michael Jackson a sorti plusieurs autres albums à succès, dont "Bad", "Dangerous" et "HIStory", qui ont tous produit des hits mondiaux tels que "Bad", "Black or White" et "You Are Not Alone". Il a également été impliqué dans de nombreuses œuvres de charité et a utilisé sa célébrité pour attirer l'attention sur des problèmes sociaux tels que la famine en Afrique et les droits des enfants.</p>
+                    <h3>Mort</h3>
+                    <p>Michael Jackson est décédé le 25 juin 2009 à l'âge de 50 ans. Sa mort a été un choc pour le monde entier et a déclenché une vague d'hommages et de commémorations à travers le globe. Les causes de la mort de Michael Jackson ont été initialement attribuées à un arrêt cardiaque, mais des enquêtes ultérieures ont révélé que sa mort était due à une overdose accidentelle de médicaments sur ordonnance. Le médecin personnel de Michael Jackson, Conrad Murray, a été accusé d'homicide involontaire et condamné à quatre ans de prison. La mort de Michael Jackson a suscité une grande tristesse et un énorme intérêt du public, avec des millions de fans du monde entier pleurant sa disparition. Les hommages ont été nombreux, notamment des concerts commémoratifs, des documentaires et des expositions consacrées à sa vie et à son héritage. Sa musique continue d'être écoutée et appréciée par des millions de personnes dans le monde entier.</p>
+                </div>
+            </div>
+        </section>
 
-      <ul class="reviews">
-        <li>
-          <a href="https://www.facebook.com/michaeljackson" target="_blank"
-            ><i class="bi bi-facebook"></i
-          ></a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/michaeljackson/" target="_blank"
-            ><i class="bi bi-instagram"></i
-          ></a>
-        </li>
-        <li>
-          <a href="https://twitter.com/michaeljackson" target="_blank"
-            ><i class="bi bi-twitter"></i
-          ></a>
-        </li>
-        <li>
-          <a
-            href="https://www.tiktok.com/@michael_jackson_king1"
-            target="_blank"
-            ><i class="bi bi-tiktok"></i
-          ></a>
-        </li>
-      </ul>
-    </footer>
-    <script src="main.js"></script>
-  </body>
+        <!-- SECTION OTHMAN -->
+        <section class="carrousel discograpy-carrousel" id="discographie">
+            <h2>Discographie</h2>
+            <div class="container">
+                <input type="radio" name="slider" id="item-1" checked />
+                <input type="radio" name="slider" id="item-2" />
+                <input type="radio" name="slider" id="item-3" />
+
+                <div class="carrousel-container">
+                    <label for="item-2" class="carrousel-slides slide1" id="song-2">
+                        <iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/album/1441212?tracklist=false" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write" class="switchable-img iframe1"></iframe>
+                    </label>
+                    <label for="item-1" class="carrousel-slides slide2 visible" id="song-1">
+                        <iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/album/96126?tracklist=false" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write" class="main-widget iframe2"></iframe>
+                    </label>
+
+                    <label for="item-3" class="carrousel-slides slide3" id="song-3">
+                        <iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/album/228321?tracklist=false" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write" class="switchable-img iframe3"></iframe>
+                    </label>
+                </div>
+                <div class="dots-container">
+                    <div class="dots dot1"></div>
+                    <div class="dots dot2" id="white"></div>
+                    <div class="dots dot3"></div>
+                </div>
+            </div>
+            <img src="./images/michael-jackson-bg.png" alt="michel jackson" class="jackson-background" />
+        </section>
+
+        <footer>
+            <!-- ICI LE CODE DE JUNIOR -->
+            <p class="copy">&copy; Copyright 2023 reserved.</p>
+
+            <ul class="reviews">
+                <li>
+                    <a href="https://www.facebook.com/michaeljackson" target="_blank"><i class="bi bi-facebook"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/michaeljackson/" target="_blank"><i class="bi bi-instagram"></i></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/michaeljackson" target="_blank"><i class="bi bi-twitter"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.tiktok.com/@michael_jackson_king1" target="_blank"><i class="bi bi-tiktok"></i></a>
+                </li>
+            </ul>
+        </footer>
+        <script src="main.js"></script>
+    </body>
 </html>
