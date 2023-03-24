@@ -56,7 +56,7 @@ document.addEventListener("scroll", onScroll, { passive: true });
 
 function displayWhenLoaded() {
     let timer;
-    timer = setTimeout(fadeOutLoader, 3500);
+    timer = setTimeout(fadeOutLoader, 1000);
 }
 
 function fadeOutLoader() {
