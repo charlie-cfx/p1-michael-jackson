@@ -152,7 +152,7 @@ nav {
     background: var(--color--black);
     top: 0;
     box-shadow: 0 10px 50px rgba(0, 0, 0, 0.14);
-    z-index: 4;
+    z-index: 6;
 }
 
 nav #logo {
