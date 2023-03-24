@@ -449,6 +449,7 @@ DISCOGRAPHIE
 }
 #discographie .carrousel-slides.visible {
     opacity: 1;
+    z-index: 5;
 }
 #discographie .jackson-background {
     display: none;
